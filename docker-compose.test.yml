@@ -1,15 +1,3 @@
-core-app:
-  build: ./dotnet
-  container_name: core-app
-
-nginx:
-  build: ./nginx
-  container_name: proxy
-  ports:
-    - 80:80
-  links:
-    - core-app
-
 test:
   build: ./tests
   container_name: testrunner
