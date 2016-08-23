@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN ["dotnet", "restore"]
 
-RUN ["dotnet", "build"]
+RUN ["dotnet", "build" "*./project.json"]
 
 EXPOSE 5000/tcp
 
