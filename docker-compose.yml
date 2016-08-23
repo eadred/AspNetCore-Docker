@@ -1,6 +1,14 @@
-core-app:
+core-app1:
   build: ./dotnet
-  container_name: core-app
+  container_name: core-app1
+
+core-app2:
+  build: ./dotnet
+  container_name: core-app2
+
+core-app3:
+  build: ./dotnet
+  container_name: core-app3
 
 nginx:
   build: ./nginx
@@ -8,4 +16,6 @@ nginx:
   ports:
     - 80:80
   links:
-    - core-app
+    - core-app1
+    - core-app2
+    - core-app3
